@@ -1,0 +1,459 @@
+/************ General Rules *************/
+:root{
+    --primary: #F59700; 
+    --primary_hover:#d18204;
+    
+    --btn-home-color: #0d334a;
+    --btn-home-hover: #2073a7;
+    
+    --home-title-color:#7A9F36;
+    --h1-color: #494949;
+}
+
+@font-face {
+  font-family: "sketchup";
+  src:  url("../assets/font/SKETCHUP FREE TRIAL.woff2") format("woff2"),
+        url("../assets/font/SKETCHUP FREE TRIAL.otf") format("otf"),
+        url("../assets/font/SKETCHUP FREE TRIAL.woff") format("woff"),
+        url("../assets/font/SKETCHUP FREE TRIAL.ttf") format("ttf")
+}
+.bg-primary{
+  background-color: var(--primary)!important;
+}
+h1{
+  font-family: "sketchup"; 
+  font-size: 4.5em;
+  color: var(--h1-color);
+}
+h2,
+h3{
+  color:#fff;
+}
+.mr-sup{
+  margin-left: 3.4rem;
+}
+.min-height{
+  height: 34.5rem;
+}
+.p-add{
+  padding-right: 4rem;
+}
+
+/*********** HOME ***********/
+.home-para{
+  color:#4e4d4b;
+  font-size: 2.5em;
+  margin-top: 12rem;
+  margin-right: 10rem;
+}
+#img{
+  height: 1080px;
+  background-color: darkgray;
+  background-image: url("../assets/img/home-bg.png");
+  background-size: cover;
+  background-position: center center;
+}
+#imgVisitor{
+  height: 1080px;
+  background-color: darkgray;
+  background-image: url("../assets/img/home-bg-visitor.png");
+  background-size: cover;
+  background-position: center center;
+}
+.modal-title{
+  text-align: center;
+}
+.ml-5, .mx-5 {
+  margin-left: 15rem!important;
+}
+.mt-5, .my-5 {
+  margin-top: 33rem!important;
+}
+
+/************** Navbar *************/
+.navbar-brand{
+  font-family: "sketchup"; 
+  font-size: 2.5em;
+  color: var(--h1-color);
+}
+a.nav-link{
+  color: white;
+}
+a.nav-link:hover{
+  transform: scale(0.9);
+  transition-duration: 0.7s;
+}
+a.nav-link:focus{
+  border: 1px solid white!important;
+}
+.color{
+  background-color: #000;
+}
+.active{
+  color: green!important;
+  text-decoration: underline;
+}
+
+/********* Login / Register ************/
+.ml-1{
+  margin-left: 4rem;
+}
+.form-width{
+  width:30rem;
+  margin: 1rem auto 0 auto;
+}
+.btn_formLogin{
+  margin: 0 5rem;
+}
+.btn_formRegister{
+  margin: 0 5rem;
+}
+.border-cooking{
+  padding-bottom: 2rem;
+  border:1px solid var(--primary);
+}
+
+/************** Button Style Custom Bootstrap  ************/
+.btn-home {
+  color: #fff;
+  background-color: var(--btn-home-color);
+  border-color:var(--btn-home-color);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.btn-home:hover {
+  color: #fff;
+  background-color: var(--btn-home-hover);
+  border-color: var(--btn-home-hover);
+}
+
+.btn-home:focus, .btn-home.focus {
+  color: #fff;
+  background-color: var(--btn-home-hover);
+  border-color: var(--btn-home-hover);
+  box-shadow: 0 0 0 0.2rem rgba(32, 115, 167, 0.5);
+}
+
+.btn-home.disabled, .btn-home:disabled {
+  color: #fff;
+  background-color: var(--btn-home-color);
+  border-color: var(--btn-home-color);
+}
+
+.btn-home:not(:disabled):not(.disabled):active, .btn-home:not(:disabled):not(.disabled).active,
+.show > .btn-home.dropdown-toggle {
+  color: #fff;
+  background-color: var(--btn-home-color);
+  border-color:var(--btn-home-color);
+}
+
+.btn-home:not(:disabled):not(.disabled):active:focus, .btn-home:not(:disabled):not(.disabled).active:focus,
+.show > .btn-home.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem var(--btn-home-color);
+}
+/**************** Primary *****************/
+.btn-primary {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  }
+  
+.btn-primary:hover {
+  color: #fff;
+  background-color: var(--primary_hover);
+  border-color: var(--primary_hover);
+}
+  
+.btn-primary:focus, .btn-primary.focus {
+  color: #fff;
+  background-color: var(--primary_hover);
+  border-color: var(--primary_hover);
+  box-shadow: 0 0 0 0.2rem rgba(211, 138, 2, 0.8);
+  }
+  
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+  
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem var(--primary);
+}
+/************** Secondary ******************/
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+}
+
+.btn-secondary:focus, .btn-secondary.focus {
+  color: #fff;
+  background-color: #5a6268;
+  border-color: #545b62;
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+.btn-secondary.disabled, .btn-secondary:disabled {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #545b62;
+  border-color: #4e555b;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+/**************** Categories recipes *****************/
+.btn-outline-primary{
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-outline-primary:hover{
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.img-sub-categorie{
+  width:250px;
+  height:250px;
+}
+
+/**************** Recipe Modal ***********/
+.mt-6{
+  margin-top: 3rem;
+}
+.recipe-title{
+  margin-top: 2rem;
+  padding: 5px;
+  color: var(--primary);
+  text-align: center;
+}
+
+/*************** Form Recipe *************/
+.w-50{
+  width: 50%;
+}
+.form-control {
+  background: transparent;
+  border: none;
+  height: 50px;
+  color: #3F3D3D !important;
+  border: 1px solid #58555A;
+  background: rgba(255, 255, 255, 0.904);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.label-size{
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary);
+}
+.formrecipe_view{
+  height: 761px;
+  width: 738px;
+  background-image: url("../assets/img/marmite.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/************* Profil ************/
+.border-primary{
+  border-color: var(--primary)!important;
+}
+.bg_view{
+  height: 761px;
+  width: 738px;
+  background-color: darkgray;
+  background-image: url("../assets/img/notebook.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/************* Chrono ************/
+.chrono-size{
+  font-size: 80px;
+}
+
+/************* Footer ************/
+#wrapper-footer{
+  overflow: hidden;
+  margin: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+.social ul {
+  list-style-type: none;
+}
+.social li {
+  display: inline-block;
+  margin-top: 5rem;
+  padding: 0 10px;
+}
+.social i:hover{
+  transform : scale(1.2);
+}
+
+.fab, .fas {
+  font-weight: 900;
+  color: white;
+}
+
+/********* Media queries *******/
+/******************************/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media(min-device-width : 320px) and (max-device-width : 480px) {
+
+  /**************** Home Page ************/
+  .btn-secondary:focus, .btn-secondary.focus {
+    color: #fff;
+    background-color:var(--primary-color);
+    border-color: #545b62;
+    box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+  }
+  #img{
+    height: 85vh;
+    width: 100vw;
+    background-color: #bbce41;
+    background-image: url("../assets/img/home-bg-mobile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .home-para{
+    color:#4e4d4b;
+    font-size: 1.5em;
+    margin-top: 6rem;
+    margin-right: 0rem;
+  }
+  .ml-5, .mx-5 {
+    margin-left: 0rem!important;
+  }
+  
+  .mt-5, .my-5 {
+    margin-top: 17rem!important;
+  }
+  .ml-1{
+    margin-left: 4rem;
+  }
+.p-recipe{
+  padding-left: 2.5rem;
+}
+  /********* Categories recipes *********/
+
+  .min-height-categorie{
+    height: 64.5rem;
+  }
+
+  /************* Modal Recipe ************/
+
+  .modal{
+    width: 100vw;
+    margin-top: 0;
+    top: -180px;
+  }
+  /************** Profil ************/
+  h1{
+    font-family: "sketchup"; 
+    font-size: 4.2em;
+    color: var(--h1-color);
+  }
+  .no-margin{
+    margin-left: 0rem!important;
+  }
+  .offset-4 {
+    margin-left: 0!important;
+  }
+  .offset-3 {
+    margin-left: 0!important;
+  }
+  .mb-btn{
+    margin-bottom: 1rem;
+  }
+  .bg_view{
+    height: 0;
+    width: 0;
+  }
+  .formrecipe_view{
+    height: 0;
+    width: 0;
+  }
+/************ Minuteur *********/
+  .chrono-size{
+    font-size: 60px;
+  }
+  .float-right {
+    float: none!important; 
+  }
+  
+  /*********** footer ************/
+  #wrapper-footer{
+    overflow: hidden;
+    margin: 0;
+    padding-bottom: 0;
+  }
+}
+    
+/* Tablette (portrait and landscape) ----------- */
+@media (min-width: 768px) and (max-width: 1024px){
+
+/************** Home ***************/
+  .mr-sup{
+    margin-left: 0rem;
+  }
+  .home-para{
+    color:#4e4d4b;
+    font-size: 1.7rem;
+    margin-top: 22rem;
+    margin-right: 10rem;
+  }
+  .mt-5, .my-5 {
+    margin-top: 11rem!important;
+  }
+/************ Add recipe *********/
+  .center-element{
+    margin: 0 auto;
+  }
+  .margin-categorie{
+    margin-bottom: 8rem;
+  }
+/************** Profil ************/
+  .mb-btn{
+    margin-bottom: 1.5rem;
+  }
+  .bg_view{
+    height: 0;
+    width: 0;
+  }
+  .formrecipe_view{
+    height: 0;
+    width: 0;
+    }
+}
