@@ -1,4 +1,4 @@
-<main class="container border-cooking">
+<main class="container border-cooking mt-6">
     <h1 class="text-center">Connexion</h1>
     <div class="offset-4">
         <form method="POST" action="login_validation">

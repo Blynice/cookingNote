@@ -124,17 +124,13 @@ class RecipeController extends MainController
         $this->generatePage($data_page);
     }
 
-    public function recipePlat($fkcategorieID)
+    public function recipePlat()
     {
-        $_SESSION['recipeData'] = [
-            "fkcategorieID" => $fkcategorieID,
 
-        ];
-        $recipeDatas = $this->RecipeManager->getRecipe($_SESSION['fkcategorieID']);
+
         $data_page = [
             "page_title" =>  "Mes recettes plats",
             "page_description" => "Mes recettes plats",
-            "recipeDatas" => $recipeDatas,
             "view" => "views/recipe/recipe-plat.view.php",
             "template" => "views/common/template.php"
         ];
@@ -153,17 +149,12 @@ class RecipeController extends MainController
         $this->generatePage($data_page);
     }
 
-    public function recipeSoupe($fkcategorieID)
+    public function recipeSoupe()
     {
-        $_SESSION['recipeData'] = [
-            "fkcategorieID" => $fkcategorieID,
 
-        ];
-        $recipeDatas = $this->RecipeManager->getRecipe($_SESSION['fkcategorieID']);
         $data_page = [
             "page_title" =>  "Mes recettes soupes",
             "page_description" => "Mes recettes soupes",
-            "recipeDatas" => $recipeDatas,
             "view" => "views/recipe/recipe-soupe.view.php",
             "template" => "views/common/template.php"
         ];
@@ -182,17 +173,11 @@ class RecipeController extends MainController
         $this->generatePage($data_page);
     }
 
-    public function recipeDessert($fkcategorieID)
+    public function recipeDessert()
     {
-        $_SESSION['recipeData'] = [
-            "fkcategorieID" => $fkcategorieID,
-
-        ];
-        $recipeDatas = $this->RecipeManager->getRecipe($_SESSION['fkcategorieID']);
         $data_page = [
             "page_title" =>  "Mes recettes desserts",
             "page_description" => "Mes recettes desserts",
-            "recipeDatas" => $recipeDatas,
             "view" => "views/recipe/recipe-dessert.view.php",
             "template" => "views/common/template.php"
         ];
@@ -210,17 +195,11 @@ class RecipeController extends MainController
         $this->generatePage($data_page);
     }
 
-    public function recipeCocktail($fkcategorieID)
+    public function recipeCocktail()
     {
-        $_SESSION['recipeData'] = [
-            "fkcategorieID" => $fkcategorieID,
-
-        ];
-        $recipeDatas = $this->RecipeManager->getRecipe($_SESSION['fkcategorieID']);
         $data_page = [
             "page_title" =>  "Mes recettes cocktails",
             "page_description" => "Mes recettes cocktails",
-            "recipeDatas" => $recipeDatas,
             "view" => "views/recipe/recipe-cocktail.view.php",
             "template" => "views/common/template.php"
         ];

@@ -1,20 +1,22 @@
 <main class="container mb-4">
     <a class="btn btn-outline-primary mb-4 mt-4" href="desserts">Retour Desserts</a>
-    <h5 class="text-center"><?= $recipeDatas['recipeName'] ?></h5>
-    <img src="<?= $recipeDatas['img_link'] ?>" class="mb-3" width="18rem" alt="photo de la recette">
+    <div class="col-lg-3 col-sm-6  mx-auto">
+        <img src="<?= URL ?>public/assets/img/aperitif1.jpg" class="mb-3" width="250px" alt="photo de la recette">
+        <h5 class="text-center">Titre de la recette</h5>
+    </div>
     <div class="row mt-3">
         <div class="col-lg-12 col-4 text-center"><b>Nombres de personnes:</b></div>
-        <div class="col-lg-12  col-4 text-center"><?= $recipeDatas['recipeNbPeople'] ?></div>
+        <div class="col-lg-12  col-4 text-center"></div>
     </div>
     <div class="row row-cols-2">
         <div class="col">
             <div class="col-lg-12 col-4 text-center"><b>Préparation:</b>
             </div>
-            <div class="col-lg-12 text-center"><?= $recipeDatas['recipeTime'] ?></div>
+            <div class="col-lg-12 text-center"></div>
         </div>
         <div class="col">
             <div class="col-lg-12 text-center"><b>Cuisson:</b></div>
-            <div class="col-lg-12 text-center"> <?= $recipeDatas['cookingTime'] ?></div>
+            <div class="col-lg-12 text-center"> </div>
         </div>
     </div>
 
@@ -23,16 +25,16 @@
             <h5 class="recipe-title">INGRÉDIENTS</h5>
             <ul class="list-group col-sm-4 mx-auto">
                 <li class="list-group-item">
-                    <b><?= $recipeDatas['quantity'] ?> <?= $recipeDatas['unityMeasure'] ?></b>
-                    <?= $recipeDatas['ingredientName'] ?>
+                    <b></b>
+
                 </li>
                 <li class="list-group-item">
-                    <b><?= $recipeDatas['quantity'] ?> <?= $recipeDatas['unityMeasure'] ?></b>
-                    <?= $recipeDatas['ingredientName'] ?>
+                    <b></b>
+
                 </li>
                 <li class="list-group-item">
-                    <b><?= $recipeDatas['quantity'] ?> <?= $recipeDatas['unityMeasure'] ?></b>
-                    <?= $recipeDatas['ingredientName'] ?>
+                    <b></b>
+
                 </li>
             </ul>
         </div>
@@ -44,7 +46,7 @@
             <ul class="list-group col-sm-8 mx-auto">
                 <li class="list-group-item">
                     <b>ÉTAPE 1:</b>
-                    <?= $recipeDatas['stepRecipe'] ?>
+
                 </li>
             </ul>
         </div>

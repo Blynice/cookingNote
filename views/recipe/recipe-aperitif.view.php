@@ -1,9 +1,9 @@
 <main class="container mb-4">
     <a class="btn btn-outline-primary mb-4 mt-4" href="aperitifs">Retour Apéritifs</a>
     <div class="row">
-        <h5 class="text-center">Titre de la recette</h5>
-        <div class="col-sm-6 mx-auto">
+        <div class="col-lg-3 col-sm-6  mx-auto">
             <img src="<?= URL ?>public/assets/img/aperitif1.jpg" class="mb-3" width="250px" alt="photo de la recette">
+            <h5 class="text-center">Titre de la recette</h5>
         </div>
     </div>
     <div class="row mt-3">

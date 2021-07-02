@@ -1,4 +1,4 @@
-<div class="container border-cooking">
+<div class="container border-cooking mt-6">
     <h1 class="text-center">Inscription</h1>
     <form class="offset-4" method="POST" action="register_validation">
 

@@ -1,7 +1,5 @@
 <?php
 session_start();
-//var_dump($_SESSION);
-
 define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http") .
     "://" . $_SERVER['HTTP_HOST'] . $_SERVER["PHP_SELF"]));
 
@@ -36,8 +34,7 @@ try {
             if (!empty($_POST['pseudo']) && !empty($_POST['pswd'])) {
                 $pseudo = Security::secureHTML($_POST['pseudo']);
                 $pswd = Security::secureHTML($_POST['pswd']);
-                var_dump($pseudo);
-                var_dump($pswd);
+
                 $userController->login_validation($pseudo, $pswd);
             } else {
                 Tools::alertMessage(
@@ -83,7 +80,6 @@ try {
                 $firstname = Security::secureHTML($_POST['firstname']);
                 $lastname = Security::secureHTML($_POST['lastname']);
                 $mail =  Security::secureHTML($_POST['mail']);
-                $mail = filter_var($_POST['mail']);
                 $pswd = Security::secureHTML($_POST['pswd']);
                 $userController->editUserProfil($pseudo, $firstname, $lastname, $mail, $pswd);
             } else {
@@ -146,21 +142,21 @@ try {
             $RecipeController->plat();
             break;
         case "recette_plats":
-            $RecipeController->recipePlat($_SESSION['IDrecette']);
+            $RecipeController->recipePlat;
             break;
 
         case "soupes":
             $RecipeController->soupe();
             break;
         case "recette_soupes":
-            $RecipeController->recipeSoupe($_SESSION['IDrecette']);
+            $RecipeController->recipeSoupe;
             break;
 
         case "desserts":
             $RecipeController->dessert();
             break;
         case "recette_desserts":
-            $RecipeController->recipeDessert($_SESSION['IDrecette']);
+            $RecipeController->recipeDessert();
             break;
 
 
@@ -168,7 +164,7 @@ try {
             $RecipeController->cocktail();
             break;
         case "recette_cocktails":
-            $RecipeController->recipeCocktail($_SESSION['IDrecette']);
+            $RecipeController->recipeCocktail();
             break;
 
         case "error301":

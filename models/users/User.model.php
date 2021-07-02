@@ -59,9 +59,9 @@ class UserManager  extends MainManager
 
 
     //Récuperation du mot de passe
-    private function getPasswordUser($pseudo)
+    public function getPasswordUser($pseudo)
     {
-        $pseudo = html_entity_decode($pseudo);
+        //$pseudo = html_entity_decode($pseudo);
         $req = "SELECT pswd FROM users WHERE pseudo = :pseudo";
         //On prépare la requête
         $stmt = $this->getBdd()->prepare($req);
@@ -77,7 +77,7 @@ class UserManager  extends MainManager
         return $result['pswd'];
     }
 
-    //Vérifie si le pseudo de et le mot de passe correspondent
+    //Vérifie si le pseudo  et le mot de passe correspondent
     public function  pswdCheck($pseudo, $pswd)
     {
         $pswdDB = $this->getPasswordUser($pseudo);
@@ -93,7 +93,7 @@ class UserManager  extends MainManager
                     lastname= :lastname,
                     mail= :mail,
                     pswd =:pswd
-                    WHERE userID';
+                    WHERE pseudo = :pseudo';
 
         $stmt = $this->getBdd()->prepare($req);
         $stmt->bindValue(":pseudo", $pseudo, PDO::PARAM_STR);
@@ -105,8 +105,6 @@ class UserManager  extends MainManager
         $isUpdate = ($stmt->rowCount() > 0);
         $stmt->closeCursor();
         return $isUpdate;
-        var_dump($req);
-        var_dump($isUpdate);
     }
 
     //Suppression du compte

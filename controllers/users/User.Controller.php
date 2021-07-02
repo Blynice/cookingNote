@@ -39,7 +39,7 @@ class UserController extends MainController
             }
         } else {
             Tools::alertMessage(
-                '<p class="text-center">Le login est déjà utilisé !</p>',
+                '<p class="text-center">Le pseudo est déjà utilisé !</p>',
                 Tools::DANGER_ALERT
             );
             header("Location: " . URL . "register");
@@ -58,8 +58,11 @@ class UserController extends MainController
 
             $_SESSION['user_profil'] = [
                 "pseudo" => $pseudo,
-                "pswd" => $pswd,
+                "pswd" => $pswd
             ];
+            Security::genererCookieConnexion();
+            echo $_SESSION['user_profil'][Security::COOKIE_NAME];
+            echo "<br />";
         } else {
             Tools::alertMessage(
                 '<p class="text-center">Combinaison pseudo / mot de passe invalide</p>',
@@ -72,6 +75,7 @@ class UserController extends MainController
     //affichage des informations de l'utilisateur
     public function profil()
     {
+
         $pseudo = $_SESSION['user_profil']['pseudo'];
         $datas = $this->userManager->getUserInformation($pseudo);
         $data_page = [
@@ -88,13 +92,21 @@ class UserController extends MainController
     public function editUserProfil($pseudo, $firstname, $lastname, $mail, $pswd)
     {
         $passwordCrypte = password_hash($pswd, PASSWORD_DEFAULT);
-        //if ($this->userManager->pseudoIsAvailable($pseudo)) {
         if ($this->userManager->updateUserProfil($pseudo, $firstname, $lastname, $mail, $passwordCrypte)) {
             Tools::alertMessage(
                 '<p class="text-center">La modification a été prise en compte</p>',
                 Tools::SUCCESS_ALERT
             );
-            header("Location: " . URL . "profil");
+            $pseudo = $_SESSION['user_profil']['pseudo'];
+            $datas = $this->userManager->getUserInformation($_SESSION['user_profil']['pseudo']);
+            $data_page = [
+                "page_description" => "Page de profil",
+                "page_title" => "Page de profil",
+                "userInfo" => $datas,
+                "view" => "views/users/profil.view.php",
+                "template" => "views/common/template.php"
+            ];
+            $this->generatePage($data_page);
         } else {
             Tools::alertMessage(
                 '<p class="text-center">Aucune modification effectuée</p>',
@@ -102,13 +114,6 @@ class UserController extends MainController
             );
             header("Location: " . URL . "profil");
         }
-        /*} else {
-            Tools::alertMessage(
-                '<p class="text-center">Ce pseudo est déjà utilisé</p>',
-                Tools::DANGER_ALERT
-            );
-            header("Location: " . URL . "profil");
-        }*/
     }
 
     //Génération de la vue suppression de compte
@@ -145,11 +150,9 @@ class UserController extends MainController
     //Deconnexion
     public function logout()
     {
-        Tools::alertMessage(
-            '<p class="text-center">Vous êtes déconnectez</p>',
-            Tools::SUCCESS_ALERT
-        );
+        Tools::alertMessage('<p class="text-center">Vous êtes déconnectez</p>', Tools::SUCCESS_ALERT);
         unset($_SESSION['user_profil']);
+        setcookie(Security::COOKIE_NAME, "", time() - 3600);
         header("Location: " . URL . "home");
     }
 
