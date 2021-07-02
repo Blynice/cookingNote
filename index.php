@@ -34,7 +34,6 @@ try {
             if (!empty($_POST['pseudo']) && !empty($_POST['pswd'])) {
                 $pseudo = Security::secureHTML($_POST['pseudo']);
                 $pswd = Security::secureHTML($_POST['pswd']);
-
                 $userController->login_validation($pseudo, $pswd);
             } else {
                 Tools::alertMessage(
